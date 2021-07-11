@@ -28,7 +28,10 @@ function App() {
   return (
     <div className="container">
       <h1>Team Builder</h1>
+
       {/* component for form functionality #2*/}
+      <Form values={teamMembers} update={update} submit={submit} />
+
       {/* component to map array of members and display #1 */}
       <Members teamMembers={teamMembers} />
     </div>
