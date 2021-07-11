@@ -4,7 +4,6 @@ export default function Members(props) {
   return (
     <div className="members-container">
       {teamMembers.map((member) => {
-        console.log(member);
         return (
           <div key={member.username} className="member">
             <h2>{member.username}</h2>
