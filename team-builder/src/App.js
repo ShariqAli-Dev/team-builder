@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState } from "react";
+
 import Form from "./components/form";
+import Members from "./components/members";
 
 const initialFormValues = {
   username: "",
@@ -25,8 +27,10 @@ function App() {
 
   return (
     <div className="container">
-      {" "}
       <h1>Team Builder</h1>
+      {/* component for form functionality #2*/}
+      {/* component to map array of members and display #1 */}
+      <Members teamMembers={teamMembers} />
     </div>
   );
 }
