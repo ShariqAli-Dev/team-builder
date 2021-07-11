@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import styled from "styled-components";
 
 import Form from "./components/form";
 import Members from "./components/members";
@@ -17,6 +18,13 @@ const teamMembers = [
     role: "engineer",
   },
 ];
+
+// stlyed components
+const StyledApp = styled.div`
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+`;
 
 function App() {
   const [formValues, setformValues] = useState(initialFormValues);
@@ -41,15 +49,17 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1>Team Builder</h1>
+    <StyledApp>
+      <div className="container">
+        <h1>Team Builder</h1>
 
-      {/* component for form functionality #2*/}
-      <Form values={teamMembers} update={updateForm} submit={submitForm} />
+        {/* component for form functionality #2*/}
+        <Form values={teamMembers} update={updateForm} submit={submitForm} />
 
-      {/* component to map array of members and display #1 */}
-      <Members teamMembers={members} />
-    </div>
+        {/* component to map array of members and display #1 */}
+        <Members teamMembers={members} />
+      </div>
+    </StyledApp>
   );
 }
 
