@@ -19,11 +19,16 @@ const teamMembers = [
   },
 ];
 
-// stlyed components
 const StyledApp = styled.div`
-  text-align: center;
   height: 100vh;
-  width: 100vw;
+  width: 80vw;
+  margin: auto;
+
+  #title {
+    color: #171717;
+    text-align: center;
+    font-size: 3rem;
+  }
 `;
 
 function App() {
@@ -50,15 +55,13 @@ function App() {
 
   return (
     <StyledApp>
-      <div className="container">
-        <h1>Team Builder</h1>
+      <h1 id="title">Team Builder</h1>
 
-        {/* component for form functionality #2*/}
-        <Form values={teamMembers} update={updateForm} submit={submitForm} />
+      {/* component for form functionality #2*/}
+      <Form values={teamMembers} update={updateForm} submit={submitForm} />
 
-        {/* component to map array of members and display #1 */}
-        <Members teamMembers={members} />
-      </div>
+      {/* component to map array of members and display #1 */}
+      <Members teamMembers={members} />
     </StyledApp>
   );
 }
